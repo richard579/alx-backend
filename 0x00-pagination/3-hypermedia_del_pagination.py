@@ -49,7 +49,7 @@ class Server:
         specified size
         """
         data = self.indexed_dataset()
-        assert index is not done and index >= 0 and index <= max(data.keys())
+        assert index is not None and index >= 0 and index <= max(data.keys())
         page_data = []
         data_count = 0
         next_index = None
@@ -63,9 +63,9 @@ class Server:
                 next_index = i
                 break
         page_info = {
-                'index': index,
-                'next_index': next_index,
-                'page_size': len(page_data),
-                'data': page_data,
+            'index': index,
+            'next_index': next_index,
+            'page_size': len(page_data),
+            'data': page_data,
         }
         return page_info

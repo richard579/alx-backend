@@ -49,7 +49,7 @@ class Server:
         """
         data = self.get_page(page, page_size)
         start, end = index_range(page, page_size)
-        total_pages = math.ceil(len(self.__dataset) / page_size
+        total_pages = math.ceil(len(self.__dataset) / page_size)
         return {
             'page_size': len(data),
             'page': page,
