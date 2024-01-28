@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Deletion-resilient hypermedia pagination
+"""Task 3: Deletion-resilient hypermedia pagination
 """
 
 import csv
@@ -45,7 +45,7 @@ class Server:
         return data[start:end]
 
     def get_hyper_index(self, index: int = None, page_size: int = 10) -> Dict:
-        """Retrieves information about a page from a given index with a 
+        """Retrieves info about a page from a given index with a
         specified size
         """
         data = self.indexed_dataset()
