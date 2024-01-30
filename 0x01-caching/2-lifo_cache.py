@@ -36,10 +36,10 @@ class LIFOCache(BaseCaching):
         """
         keyOut = None
         with self.__rlock:
+            keysLength = len(self.__keys)
             if keyIn not in self.__keys:
-                keysLength = len(self.__keys)
                 if len(self.cache_data) == BaseCaching.MAX_ITEMS:
-                    keyOut = self.__keys.pop(0)
+                    keyOut = self.__keys.pop(keysLength - 1)
                     self.cache_data.pop(keyOut)
             else:
                 self.__keys.remove(keyIn)
