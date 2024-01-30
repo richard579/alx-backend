@@ -6,8 +6,8 @@ from threading import RLock
 BaseCaching = __import__('base_caching').BaseCaching
 
 
-class MRUCache(BaseCaching):
-    '''An implementation of MRU(Most Recently Used) cache
+class LFUCache(BaseCaching):
+    '''An implementation of LFU(Least Frequently Used)
     '''
     def __init__(self):
         super().__init__()
