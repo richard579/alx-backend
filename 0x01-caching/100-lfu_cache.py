@@ -11,7 +11,7 @@ class LFUCache(BaseCaching):
     '''
     def __init__(self):
         super().__init__()
-        self.__stats = []
+        self.__stats = {}
         self.__rlock = RLock()
 
     def put(self, key, item):
